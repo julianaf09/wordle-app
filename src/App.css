@@ -1,4 +1,4 @@
-.correct-position-letter {
+/* .correct-position-letter {
   font-weight: bold;
   color: green;
 }
@@ -9,4 +9,46 @@
 
 .correct-letter {
   color: red;
+} */
+
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+[data-theme='dark'] {
+  --background-color: #333333;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000;
+  margin: 4px;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.box.correct-letter {
+  background-color: #8a8a4d;
+}
+
+.box.correct-position {
+  background-color: #559655;
 }

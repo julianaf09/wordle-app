@@ -6,6 +6,7 @@ import GuessWord from './components/GuessWord';
 import Feedback from './components/Feedback';
 import Scoreboard from './components/Scoreboard';
 import EndGame from './components/Endgame';
+import Theme from './components/Theme';
 
 function App() {
   const [secretWord, setSecretWord] = useState(generateRandomWord());
@@ -75,13 +76,14 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='main-container'>
       <Header />
+      <Theme />
       <SecretWord attempts={attempts} secretWord={secretWord}/>
       {!isGameWon && !isGameLost && (
         <div>
           <GuessWord onGuess={handleGuess} />
-          <Feedback correctLetters={correctLetters} correctPositions={correctPositions} />
+          {/* <Feedback correctLetters={correctLetters} correctPositions={correctPositions} /> */}
           {/* <Scoreboard score={score} /> */}
         </div>
       )}
