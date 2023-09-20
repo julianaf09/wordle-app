@@ -3,7 +3,7 @@ import Switch from '@mui/material/Switch'
 import { FormControlLabel } from "@mui/material";
 
 const Theme = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
     changeTheme();
