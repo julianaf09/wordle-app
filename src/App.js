@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Header from "./components/Header";
-//import SecretWord from "./components/SecretWord";
+import SecretWord from "./components/SecretWord";
 import GuessWord from "./components/GuessWord";
 import EndGame from "./components/Endgame";
 import Theme from "./components/Theme";
-import Feedback from "./components/Feedback";
+// import Feedback from "./components/Feedback";
 
 function App() {
   const [secretWord, setSecretWord] = useState("");
@@ -81,8 +81,8 @@ function App() {
     <div className="main-container">
       <Header className="header" />
       <Theme />
-      {/* <SecretWord attempts={attempts} /> */}
-      <Feedback attempts={attempts} />
+      <SecretWord attempts={attempts} />
+      {/* <Feedback attempts={attempts} /> */}
       {!isGameWon && !isGameLost && (
         <div>
           <GuessWord onGuess={handleGuess} />
