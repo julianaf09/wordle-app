@@ -5,7 +5,6 @@ import SecretWord from "./components/SecretWord";
 import GuessWord from "./components/GuessWord";
 import EndGame from "./components/Endgame";
 import Theme from "./components/Theme";
-// import Feedback from "./components/Feedback";
 
 function App() {
   const [secretWord, setSecretWord] = useState("");
@@ -82,7 +81,6 @@ function App() {
       <Header className="header" />
       <Theme />
       <SecretWord attempts={attempts} />
-      {/* <Feedback attempts={attempts} /> */}
       {!isGameWon && !isGameLost && (
         <div>
           <GuessWord onGuess={handleGuess} />
